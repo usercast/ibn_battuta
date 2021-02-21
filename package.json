@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "snowpack dev",
-    "build": "snowpack build"
+    "build": "snowpack build",
+    "commit": "commit"
   },
   "author": "github.com/user_cast",
   "license": "Apache-2.0",
@@ -15,7 +16,11 @@
   },
   "browserslist": "defaults, not ie 10, not UCAndroid >0, not OperaMini all",
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt-cli": "^11.0.0",
     "@snowpack/plugin-webpack": "^2.3.0",
+    "husky": "^5.0.9",
     "snowpack": "^3.0.11"
   }
 }
