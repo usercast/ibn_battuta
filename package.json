@@ -7,5 +7,9 @@
     "test": "exit 1"
   },
   "author": "github.com/user_cast",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "mutation-summary": "https://github.com/usercast/mutation-summary",
+    "tree-mirror": "https://github.com/usercast/tree-mirror"
+  }
 }
