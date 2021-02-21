@@ -1,0 +1,11 @@
+{
+  "name": "ibn_battuta",
+  "version": "1.0.0",
+  "description": "A great traveller and explorer, who travelled the old world",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "exit 1"
+  },
+  "author": "github.com/user_cast",
+  "license": "Apache-2.0"
+}
