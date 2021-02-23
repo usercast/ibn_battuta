@@ -1,3 +1,4 @@
-import { helloWorld } from './src/hello_world';
+import { TreeMirrorClient } from 'tree-mirror';
+import Replicator from './src/replicator';
 
-setTimeout(helloWorld, 1000);
+new Replicator();
