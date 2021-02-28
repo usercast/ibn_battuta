@@ -1,4 +1,5 @@
-import { TreeMirrorClient } from 'tree-mirror';
+import { TreeMirrorClient } from "tree-mirror";
+import { postRequest } from "request";
 
 class Replicator {
   constructor() {
@@ -7,6 +8,8 @@ class Replicator {
 
   socketSend(msg) {
     console.log(JSON.stringify(msg));
+    const url = "http://localhost:3000/stream";
+    postRequest(url, msg);
   }
 
   startMirroring() {
@@ -15,14 +18,14 @@ class Replicator {
     new TreeMirrorClient(document, {
       initialize: (rootId, children) => {
         this.socketSend({
-          f: 'initialize',
+          f: "initialize",
           args: [rootId, children]
         });
       },
 
       applyChanged: (removed, addedOrMoved, attributes, text) => {
         this.socketSend({
-          f: 'applyChanged',
+          f: "applyChanged",
           args: [removed, addedOrMoved, attributes, text]
         });
       }
